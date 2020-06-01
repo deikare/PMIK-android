@@ -329,7 +329,7 @@ public class BluetoothChatFragment extends Fragment {
             seconds_time -= seconds;
             seconds_time /= 60;
             int minutes = (int)(seconds_time % 60);
-            int hours = (int)(((seconds_time - minutes) / 60) % 24);
+            int hours = (int)(((seconds_time - minutes) / 60 + 2) % 24);
             return "" + ((hours < 10)? "0" : "") + hours + ":" + ((minutes < 10)? "0" : "") + minutes + ":" + ((seconds < 10)? "0" : "") + seconds;
         }
     }
